@@ -1,0 +1,10 @@
+name: Dev dependency
+type: module
+description: Enables development modules to aid developers.
+core: 8.x
+package: miggle
+dependencies:
+  - field_ui
+  - simpletest
+  - views_ui
+  - webprofiler

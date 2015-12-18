@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains dev_dependency.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dev_dependency_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dev_dependency module.
+    case 'help.page.dev_dependency':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Enables development modules to aid developers.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

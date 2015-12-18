@@ -2,5 +2,23 @@
 
 /**
  * @file
- * Drupal module file for master_dependency.
+ * Contains master_dependency.module.
  */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function master_dependency_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the master_dependency module.
+    case 'help.page.master_dependency':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Enables all required module dependencies.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
